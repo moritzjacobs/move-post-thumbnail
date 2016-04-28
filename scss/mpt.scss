@@ -1,0 +1,102 @@
+/* FEATURED IMAGE NEXT TO TITLE ON EDIT.PHP */
+
+
+$rpid_w : 140px;
+$rpid_h : $rpid_w * (9/16);
+
+.titlediv-has-replaced-postimagediv {
+	padding-right: $rpid_w + 20px;
+	margin-bottom: 15px;
+}
+
+#postimagediv {
+	display: none;
+	box-sizing: border-box;
+	position: absolute;
+	border: 1px solid #bbb;
+	top: 0;
+	right: 0;
+	width: $rpid_w;
+	height: $rpid_h;
+	
+	
+	%rpid_btn {
+		display: block;
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		width: 25px;
+		height: 25px;
+		border: 1px solid #aaa;
+		background-color: #fff;
+		box-shadow: 0px 1px 1px rgba(#000000, 0.4);
+		border-radius: 50%;
+		
+		font-family: dashicons;
+		text-align: center;
+		color: #aaa;
+		font-size: 17px;
+		line-height: 25px;
+	}
+	
+	#set-post-thumbnail {
+		background-color: #ccc;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 0;
+		color: rgba(#fff, 0);
+		
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: 100%;
+			height: auto;
+			z-index: 1;
+		}
+	
+		&:after {
+			font-family: dashicons;
+			content: "\f128";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: $rpid_h;
+			line-height: $rpid_h;
+			font-size: $rpid_h * 0.66;
+			color: #eee;
+			text-align: center;
+			z-index: 0;
+		}
+		
+		&:before {
+			@extend %rpid_btn;
+			content: "\f464";
+		}
+	}
+	
+	#remove-post-thumbnail {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		font-size: 0;
+		color: rgba(#fff, 0);
+		
+		&:before {
+			@extend %rpid_btn;
+			content: "\f182";
+		}
+	}
+}
+
+
+
