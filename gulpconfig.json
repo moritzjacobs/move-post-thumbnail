@@ -1,0 +1,12 @@
+{
+	"title": "move-post-thumbnail",
+	"description": "Move the post thumbnail metabox to a prettier place next to the title in post.php",
+	"copyright": "(c) 2016 moritzjacobs.de",
+	"version": "0.0.1",
+	"paths": {
+		"src_sass": "./scss/",
+		"src_js": "./js/",
+		"dist_css": "./public/css/",
+		"dist_js": "./public/js/"
+	}
+}
